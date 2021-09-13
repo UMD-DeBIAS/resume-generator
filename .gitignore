@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# CONTAINS API KEYS, DO NOT REMOVE THIS UNDER ANY CIRCUMSTANCE UNDER PAIN OF DEATH
+config.py
+.vscode
