@@ -129,5 +129,6 @@ dmypy.json
 .pyre/
 
 # CONTAINS API KEYS, DO NOT REMOVE THIS UNDER ANY CIRCUMSTANCE UNDER PAIN OF DEATH
-config.py
-.vscode
+
+.vscode/
+keys.py
