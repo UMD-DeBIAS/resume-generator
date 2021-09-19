@@ -35,7 +35,7 @@ deliverable = {
     "summary": re.search('Summary:(.+)\n', text).group(1)
   },
   "work": [{
-    
+
   }]
 }
 
