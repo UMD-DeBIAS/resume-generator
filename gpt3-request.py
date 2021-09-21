@@ -7,7 +7,9 @@ from config import *
 from keys import OPENAI_API_KEY
 
 def get_interests(interests_txt):
-
+  interests = interests_txt.split('. ')
+  interests[-1] = interests[-1][:-1] #Gets rid of trailing period
+  return [{"name": interest} for interest in interests]
 
 '''openai.api_key = OPENAI_API_KEY
 
@@ -32,11 +34,11 @@ response = {
       "finish_reason": "stop",
       "index": 0,
       "logprobs": None,
-      "text": "Robbie Berglund\nJob Title:Solutions Architect\nSummary:I am a solutions architect skilled at architecting and implementing complex enterprise software systems and at building and managing teams.\nCompany #1 Name:Resonate\nCompany #1 Role:Co-Founder, CTO\nCompany #1 Summary:Resonate developed a SAAS platform that enables credit unions to conduct a unified end-to-end business messaging modernization project.\nCompany #1 Highlight 1:Built a platform that enabled a small team to bring a product to market without a single developer.\nCompany #1 Highlight 2:Managed a small team of developers and designers\nCompany #2 Name:StackAdapt\nCompany #2 Role:CTO\nCompany #2 Summary:StackAdapt built a web-based platform for developers to automate and optimize their cloud infrastructure.\nCompany #2 Highlight 1:Built a platform from scratch to help automate the infrastructure of a variety of customers using a wide variety of technologies\nCompany #2 Highlight 2:Built a large scale distributed system\nPersonal Reference:I have experience working with Robbie both as a peer and as a member of a larger team, and have found him to be a very valuable asset to any team.\nCompany Name #1:Greenhouse Software\nCompany Role #1:Backend Developer\nFirst Company Summary #1: Built various services for a popular software as a service startup.\nCompany #1 Highlight 1:Worked on a variety of financial APIs\nCompany #1 Highlight 2:Designed and implemented a metrics gathering system\nCompany #2 Name:Greenhouse Software\nCompany #2 Role:Software Engineer / Developer\nCompany #2 Summary:Part time work while at Fullstack Academy. Worked on various JavaScript applications utilizing MEAN stack (Angular, Express, Node.js, MongoDB)\nPersonal Reference:Robbie is extremely personable and always willing to go above and beyond to help his teammates and his customers. I was happy to have him as part of my team at Greenhouse Software!\nInterests: Graphic Design. Sailing. Designing and building things.\n"
+      "text": "Steven Finamore\nJob Title:Full Stack Developer\nSummary:I'm a full stack developer, having covered all aspects of software development, from dev to QA to production, and I'm always looking for interesting new challenges. My main focus is JS, but I'm also experienced in multiple backend technologies, including Java, Scala, and Golang.\nCompany #1:Kollective Technology\nCompany #1:Senior Software Engineer\nSummary:Created and led a team of developers in building and maintaining a series of fully automated, data-driven websites and applications.\nCompany #1:Highlight 1:Created and led a team of developers in building and maintaining a series of fully automated, data-driven websites and applications.\nCompany #1:Highlight 2:Developed a client-side web platform to support a suite of data management, reporting, and dashboarding tools\nPersonal Reference:Steven has an excellent track record of on-time, on-budget delivery on projects of all sizes. He's professional, responsive, hard-working, and extremely capable.\nInterests:\n\n"
     }
   ],
-  "created": 1632169880,
-  "id": "cmpl-3kKEabFvRuqHwDScUsSNkPEgDUGj6",
+  "created": 1632242782,
+  "id": "cmpl-3kdCQ4aT9yM4DdFA3tZmb3lYirKl9",
   "model": "davinci:2020-05-03",
   "object": "text_completion"
 }
@@ -71,12 +73,7 @@ deliverable = {
   "references": [{
     "reference": re.search('Personal Reference:(.+)\n', text).group(1)
   }],
-  "interests": [{
-    "name": get_interests(re.search('Interests: (.+)\n', text).group(1))
-  },
-  {
-    "name": re.search('Interests: ([\w]+)\. ([\w]+)\.\n', text).group(2)
-  }]
+  "interests": get_interests(re.search('Interests: (.+)\n', text).group(1))
 }
 
 print(deliverable)
