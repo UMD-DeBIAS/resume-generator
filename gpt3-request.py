@@ -40,7 +40,7 @@ def get_summary(txt, num):
 
 openai.api_key = OPENAI_API_KEY
 
-with open(GPT_REQUEST_FILE, 'r') as f:
+'''with open(GPT_REQUEST_FILE, 'r') as f:
     gpt_request = f.read()
 
 response = openai.Completion.create(
@@ -56,8 +56,12 @@ response = openai.Completion.create(
 
 print(response)
 
-text = response["choices"][0]["text"]
-
+text = response["choices"][0]["text"]'''
+with open('test1.txt') as f:
+  text = f.readlines()
+  text = ''.join(text)
+#text =
+print(text)
 deliverable = {
   "basics": {
     "name": re.search('^([\w\s]+)\n', text).group(1),
