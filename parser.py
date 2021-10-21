@@ -59,7 +59,7 @@ def main(args=None):
         filename = sys.argv[1]
         output = 'resume.json'
 
-    with open(filename) as f:
+    with open(Path(filename)) as f:
         text = f.readlines()
         text = ''.join(text)
 
@@ -99,7 +99,7 @@ def main(args=None):
     if args.verbose:
         print(deliverable)
 
-    with open(output, 'w') as f:
+    with open(Path(output), 'w') as f:
         json.dump(deliverable, f)
 
 

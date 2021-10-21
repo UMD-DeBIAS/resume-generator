@@ -1,15 +1,15 @@
-"John Anderson\n
-Job Title:Software Engineer\n
-Summary:I have been a software engineer for the last 10 years. I have been working primarily in Java and .NET, with a little bit of python and javascript on the side. In the last year, I have been involved with a React / Redux application that is a PWA.\n
-Company #1 Name:Community Foods\n
-Company #1 Role:Front End Engineer\n
-Company #1 Summary:Community Foods is a family-owned grocery store that has been a staple in the Northern Virginia community for over 50 years. I helped build a new, single page SPA that is react, react-router, redux, webpack, node, mongodb, docker, and isomorphic.\n
-Company #1 Highlight 1:Built a very large and complex React / Redux application. It works on all platforms and has IOS/Android builds due to it being a PWA. (wrapped it in React Native though only implementing a WebView)\n
-Company #1 Highlight 2:Hosted on a mixture of Heroku Apps and EC2 servers.\n
+John Anders
+Job Title:Software Engineer
+Summary:I have been a software engineer for the last 10 years. I have been working primarily in Java and .NET, with a little bit of python and javascript on the side. In the last year, I have been involved with a React / Redux application that is a PWA.
+Company #1 Name:Community Foods
+Company #1 Role:Front End Engineer
+Company #1 Summary:Community Foods is a family-owned grocery store that has been a staple in the Northern Virginia community for over 50 years. I helped build a new, single page SPA that is react, react-router, redux, webpack, node, mongodb, docker, and isomorphic.
+Company #1 Highlight 1:Built a very large and complex React / Redux application. It works on all platforms and has IOS/Android builds due to it being a PWA. (wrapped it in React Native though only implementing a WebView)
+Company #1 Highlight 2:Hosted on a mixture of Heroku Apps and EC2 servers.
 Company #2 Name:Spartan Cycles\n
-Company #2 Role:Senior Software Engineer\n
-Company #2 Summary:I was responsible for maintaining and extending the PHP based e-commerce web site that is responsible for managing millions of dollars of online retail bicycle sales.\n
-Company #2 Highlight 1:Increased the capacity of the e-commerce website by 40% without any downtime by rewriting the shopping cart to use SQL instead of the previously used MongoDB\n
-Company #2 Highlight 2:Migrated the website to microservices using NGINX for load balancing, Service Discovery, and Envoy Proxy\n
-Personal Reference:John is an outstanding engineer who has always gone above and beyond to complete his work. He has demonstrated excellent skills with both front end and back end development, as well as helping out on some of the infrastructure projects I have given him. He is very good at taking complex problems and breaking them down into manageable pieces.\n
-Interests: Travel. Soccer.\n"
+Company #2 Role:Senior Software Engineer
+Company #2 Summary:I was responsible for maintaining and extending the PHP based e-commerce web site that is responsible for managing millions of dollars of online retail bicycle sales.
+Company #2 Highlight 1:Increased the capacity of the e-commerce website by 40% without any downtime by rewriting the shopping cart to use SQL instead of the previously used MongoDB
+Company #2 Highlight 2:Migrated the website to microservices using NGINX for load balancing, Service Discovery, and Envoy Proxy
+Personal Reference:John is an outstanding engineer who has always gone above and beyond to complete his work. He has demonstrated excellent skills with both front end and back end development, as well as helping out on some of the infrastructure projects I have given him. He is very good at taking complex problems and breaking them down into manageable pieces.
+Interests: Travel. Soccer.
