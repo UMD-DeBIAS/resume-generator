@@ -132,3 +132,7 @@ dmypy.json
 
 .vscode/
 keys.py
+
+.txt
+example-gen.txt
+gpt3-input.txt
