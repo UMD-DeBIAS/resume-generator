@@ -69,7 +69,7 @@ def parse_resume_str(text):
             items = ''.join(splits[1:]).strip().split('.')[:-1] # last index is always empty string
             interests.extend([item.strip() for item in items])
         else:
-            print(f'Did not recognize any fields in the following line\n{line}')
+            raise ValueError(f'Did not recognize any fields in the following line\n{line}')
 
     resume_dict = {
         "basics": {
@@ -112,7 +112,7 @@ def parse_resume(filename, verbose=False):
 
 def main(args=None):
     if len(sys.argv[1:]) > 0:
-        parser = ArgumentParser("DeBIAS Resume Parser Enrtypoint")
+        parser = ArgumentParser("DeBIAS Resume Parser Entrypoint")
         parser.add_argument('-f', '--resume-text-file', dest='filename',
                             help='Path to text file containing resume data')
         parser.add_argument('-o', '--output', dest='output',
