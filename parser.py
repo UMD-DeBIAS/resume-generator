@@ -67,7 +67,7 @@ def parse_resume_str(text):
             refs.append(''.join(splits[1:]))
         elif 'Interests' in splits[0]: # need the interests to be semicolon separated
             items = ''.join(splits[1:]).strip().split('.')[:-1] # last index is always empty string
-            interests.extend(items)
+            interests.extend([item.strip() for item in items])
         else:
             print(f'Did not recognize any fields in the following line\n{line}')
 
@@ -139,7 +139,7 @@ def main(args=None):
 
     # Saves the dict as a resume
     with open(output, 'w') as f:
-        json.dump(resume_dict, f)   
+        json.dump(resume_dict, f, indent=4, separators=(',', ': '))
         print(f'Resume parsed into JSON at {output.absolute()}')
 
 
