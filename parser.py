@@ -66,7 +66,7 @@ def parse_resume_str(text):
         elif 'Reference' in splits[0]:
             refs.append(''.join(splits[1:]))
         elif 'Interests' in splits[0]: # need the interests to be semicolon separated
-            items = ''.join(splits[1:]).strip().split(';')
+            items = ''.join(splits[1:]).strip().split('.')[:-1] # last index is always empty string
             interests.extend(items)
         else:
             print(f'Did not recognize any fields in the following line\n{line}')
