@@ -54,15 +54,16 @@ def main(args=None):
             
         try:
             resume_dict = parse_resume_str(resume_text)
+            
+            filename = output_dir / f"{resume_dict['basics']['name'].strip().replace(' ', '_')}.json"
+            with open(filename, 'w') as f:
+                json.dump(resume_dict, f, indent=4, separators=(',', ': '))
         except Exception as e:
             fail_count += 1
             with open(fail_dir / f'fail{fail_count}.txt', 'w') as f:
                 f.write(resume_text)
         
-        filename = output_dir / f"{resume_dict['basics']['name'].strip().replace(' ', '_')}.json"
-
-        with open(filename, 'w') as f:
-            json.dump(resume_dict, f, indent=4, separators=(',', ': '))
+        
 
     print(f'{num_resumes - fail_count} resumes generated and saved to {output_dir}')
     print(f'{fail_count} failed to parse')
