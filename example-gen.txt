@@ -6,7 +6,7 @@ Company #1 Role:Front End Engineer
 Company #1 Summary:Community Foods is a family-owned grocery store that has been a staple in the Northern Virginia community for over 50 years. I helped build a new, single page SPA that is react, react-router, redux, webpack, node, mongodb, docker, and isomorphic.
 Company #1 Highlight 1:Built a very large and complex React / Redux application. It works on all platforms and has IOS/Android builds due to it being a PWA. (wrapped it in React Native though only implementing a WebView)
 Company #1 Highlight 2:Hosted on a mixture of Heroku Apps and EC2 servers.
-Company #2 Name:Spartan Cycles\n
+Company #2 Name:Spartan Cycles
 Company #2 Role:Senior Software Engineer
 Company #2 Summary:I was responsible for maintaining and extending the PHP based e-commerce web site that is responsible for managing millions of dollars of online retail bicycle sales.
 Company #2 Highlight 1:Increased the capacity of the e-commerce website by 40% without any downtime by rewriting the shopping cart to use SQL instead of the previously used MongoDB
